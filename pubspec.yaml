@@ -56,6 +56,8 @@ dependencies:
   intl: ^0.17.0
   path: ^1.8.0
   just_audio: ^0.9.40
+  audio_waveforms: ^1.0.5
+  simple_waveform_progressbar: ^0.0.3
 
 dev_dependencies:
   flutter_test:

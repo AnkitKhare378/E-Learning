@@ -28,7 +28,7 @@ class _RecordAudioSheetState extends State<RecordAudioSheet> {
   Future<void> _initRecorder() async {
     try {
       bool? hasPermission = await FlutterVoiceRecorder.hasPermissions;
-      if (!hasPermission!) {
+      if (hasPermission!) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('Permission required to record audio.')),
         );

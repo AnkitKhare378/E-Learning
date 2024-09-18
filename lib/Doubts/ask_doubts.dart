@@ -245,6 +245,8 @@ class _AskDoubtsState extends State<AskDoubts> {
                       );
                     }
                 ),
+
+                ///// show Audio
               ),
 
               const SizedBox(height: 10),

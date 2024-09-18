@@ -1,7 +1,7 @@
-import 'package:e_learning/Doubts/All_Doubts/all_doubts.dart';
-import 'package:e_learning/Doubts/ask_doubts.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_segmented_tab_control/animated_segmented_tab_control.dart';
+import 'package:e_learning/Doubts/All_Doubts/all_doubts.dart';
+import 'package:e_learning/Doubts/ask_doubts.dart';
 
 class Screen2 extends StatefulWidget {
   const Screen2({Key? key}) : super(key: key);
@@ -15,8 +15,8 @@ class _Screen2State extends State<Screen2> with SingleTickerProviderStateMixin {
 
   @override
   void initState() {
-    _tabController = TabController(length: 2, vsync: this);
     super.initState();
+    _tabController = TabController(length: 2, vsync: this);
   }
 
   @override
@@ -66,32 +66,30 @@ class _Screen2State extends State<Screen2> with SingleTickerProviderStateMixin {
           ),
         ],
       ),
-      floatingActionButton: Container(
-        width: 110, // Adjust the width as needed
-        height: 40, // Adjust the height as needed
-        child: FloatingActionButton.extended(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) =>  AskDoubts()),
-            );
-          },
-          icon: Icon(
-            Icons.add_box_outlined,
-            color: Colors.white,
-            size: 18,
-          ),
-          label: Text(
-            'Ask Doubts',
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.w600,
-              fontSize: 13,
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => AskDoubts(), // Pass null or a default value if needed
             ),
-          ),
-          backgroundColor: Colors.blue,
-          tooltip: 'Ask Doubts',
+          );
+        },
+        icon: Icon(
+          Icons.add_box_outlined,
+          color: Colors.white,
+          size: 18,
         ),
+        label: Text(
+          'Ask Doubts',
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w600,
+            fontSize: 13,
+          ),
+        ),
+        backgroundColor: Colors.blue,
+        tooltip: 'Ask Doubts',
       ),
     );
   }
